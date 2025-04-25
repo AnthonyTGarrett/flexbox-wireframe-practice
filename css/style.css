@@ -27,6 +27,8 @@ header {
   flex-direction: column;
   gap: 0.8rem;
   padding: 2rem;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .article-container {
@@ -36,6 +38,12 @@ header {
   padding: 2rem 1.2rem;
   justify-content: space-evenly;
   gap: 2rem;
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 article {
@@ -57,4 +65,53 @@ aside {
 
 footer {
   background-color: #e06b26;
+}
+
+/* grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+); */
+
+@media screen and (min-width: 768px) {
+  .middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem;
+    max-width: 768px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  aside {
+    order: -1;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1,
+  h2 {
+    font-weight: 400;
+  }
+
+  .article-container {
+    flex: 3 1 auto;
+  }
+
+  header,
+  footer {
+    padding: 1.5rem 1rem;
+  }
 }
